@@ -14,7 +14,7 @@ workflows:
           name: 'end-to-end tests'
 
       #       # install dependencies first (on 1 machine)
-       - cypress/install
+      # - cypress/install
       # # now run tests
       - run: npm run record
       # - cypress/run:
