@@ -1,0 +1,25 @@
+{
+  "name": "testautomationcypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "record": "cypress run --record --key dcbe6b9e-f4b3-418e-8733-c46eca441060",
+    "chrome": "cypress run --record --key dcbe6b9e-f4b3-418e-8733-c46eca441060 --browser chrome",
+    "firefox": "cypress run --record --key dcbe6b9e-f4b3-418e-8733-c46eca441060 --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developedbydmac/testAutomationCypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developedbydmac/testAutomationCypress/issues"
+  },
+  "homepage": "https://github.com/developedbydmac/testAutomationCypress#readme",
+  "devDependencies": {
+    "cypress": "^7.6.0"
+  }
+}
