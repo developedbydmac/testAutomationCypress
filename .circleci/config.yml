@@ -13,7 +13,7 @@ workflows:
       - cypress/run:
           name: 'end-to-end tests'
           command: npm install
-          run: npm run record
+          run: npx cypress run --record --key dcbe6b9e-f4b3-418e-8733-c46eca441060 --headless --browser chrome
           record: true
           parallel: true
           parallelism: 4
