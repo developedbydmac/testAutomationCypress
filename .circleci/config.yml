@@ -13,7 +13,15 @@ workflows:
     jobs:
       - cypress/run:
           name: 'end-to-end tests'
-          run-command: npm run record 
+          command: npm run record 
+          record: true
+          parallel: true
+          parallelism: 4
+          group: 4 machines
+          store_artifacts: true
+          post-steps:
+            - store_test_results:
+                path: cypress/results
 
       #       # install dependencies first (on 1 machine)
       # - cypress/install
