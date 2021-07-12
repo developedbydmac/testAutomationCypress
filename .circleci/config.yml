@@ -10,16 +10,25 @@ workflows:
   build:
     # Run the welcome/run job in its own container
     jobs:
-      - cypress/install:
-          name: 'Install'
-          command: npm install
+      - cypress/install
       - cypress/run:
-          name: 'end-to-end tests'
-          command: npm run test
+          name: 4 machines
+          requires:
+            - cypress/install
+          record: true
+          parallel: true
+          parallelism: 4
+          group: 4 machines
+      - cypress/run:
+          name: Chrome
+          requires:
+            - cypress/install
+          executor: cypress/browsers-chrome69
           record: true
           parallel: true
           parallelism: 2
-          group: 2 machines
+          group: smoke tests
+          browser: chrome
           # post-steps:
           #   - store_artifacts:
           #       path: mochawesome-report
