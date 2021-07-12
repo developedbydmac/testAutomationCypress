@@ -10,8 +10,8 @@ workflows:
   build:
     # Run the welcome/run job in its own container
     jobs:
-      - cypress/install:
-          name: 'Install Dependecies'
+      - cypress/run:
+          name: 'Install'
           command: npm install
 
 
