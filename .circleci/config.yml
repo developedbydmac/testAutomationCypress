@@ -11,25 +11,23 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - cypress/install
-      - cypress/run:
-          command: npm run test
-          name: 4 machines
-          requires:
-            - cypress/install
+      # - cypress/run:
+      #     command: npm run test
+      #     name: 4 machines
+      #     requires:
+      #       - cypress/install
           # record: true
-          parallel: true
-          parallelism: 4
-          group: 4 machines
+          # parallel: true
+          # parallelism: 4
+          # group: 4 machines
       - cypress/run:
-          command: npm run test
+          command: cypress run --record --key dcbe6b9e-f4b3-418e-8733-c46eca441060 --browser chrome
           name: Chrome
           requires:
             - cypress/install
           # record: true
           parallel: true
           parallelism: 2
-          group: smoke tests
-          browser: chrome
           # post-steps:
           #   - store_artifacts:
           #       path: mochawesome-report
