@@ -35,5 +35,5 @@ workflows:
       #       # to avoid installing them on each machine running tests
       #       - cypress/install
       #     # record: true # record results to Cypress Dashboard
-           parallel: true # run tests in parallel
-           parallelism: 2 # use 3 CircleCI machines
+          #  parallel: true # run tests in parallel
+          #  parallelism: 2 # use 3 CircleCI machines
