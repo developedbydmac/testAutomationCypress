@@ -13,6 +13,10 @@ workflows:
       - cypress/install:
           name: 'Install Dependecies'
           command: npm install
+
+
+      #       # install dependencies first (on 1 machine)
+      # - cypress/install
       # # now run tests
       # - cypress/run:
       #     # give this job a custom name for clarity
