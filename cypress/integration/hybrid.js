@@ -47,7 +47,7 @@ describe('Exploring the Event Briefs', () => {
       //createe brief button
       cy.get('.update--button').click()
       cy.wait(1500)
-        // eventBrief.createBrief()
+        // eventBrief.createBrief() 
     })
 
     it('Fill In General Page', function () {
