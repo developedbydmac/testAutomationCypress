@@ -1,5 +1,9 @@
 pipeline {
 	agent any
+
+  tools {nodejs "nodejs12"}
+
+  
 	stages {
 		stage('Clone Git Repo'){
 				steps{
